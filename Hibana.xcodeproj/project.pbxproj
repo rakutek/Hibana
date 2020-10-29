@@ -11,6 +11,7 @@
 		33A39A30254AC2CA00B6AA95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A2F254AC2CA00B6AA95 /* ContentView.swift */; };
 		33A39A32254AC2CA00B6AA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A39A31254AC2CA00B6AA95 /* Assets.xcassets */; };
 		33A39A35254AC2CA00B6AA95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */; };
+		33A39A42254AC47900B6AA95 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A41254AC47900B6AA95 /* ClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		33A39A31254AC2CA00B6AA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33A39A36254AC2CA00B6AA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A39A41254AC47900B6AA95 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		33A39A2C254AC2CA00B6AA95 /* Hibana */ = {
 			isa = PBXGroup;
 			children = (
+				33A39A40254AC46100B6AA95 /* Views */,
 				33A39A2D254AC2CA00B6AA95 /* HibanaApp.swift */,
 				33A39A2F254AC2CA00B6AA95 /* ContentView.swift */,
 				33A39A31254AC2CA00B6AA95 /* Assets.xcassets */,
@@ -67,6 +70,14 @@
 				33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33A39A40254AC46100B6AA95 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33A39A41254AC47900B6AA95 /* ClockView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A39A30254AC2CA00B6AA95 /* ContentView.swift in Sources */,
+				33A39A42254AC47900B6AA95 /* ClockView.swift in Sources */,
 				33A39A2E254AC2CA00B6AA95 /* HibanaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
