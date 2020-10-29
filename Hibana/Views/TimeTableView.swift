@@ -33,7 +33,8 @@ struct TimeTableView: View {
         
         VStack{
             ForEach(0..<djs.name.count) { num in
-                if(self.djs.name[num] == ""){
+//                if(self.djs.name[num] == ""){
+                if(self.djs.active[num] == false){
                     
                 }
                 else {
@@ -41,7 +42,9 @@ struct TimeTableView: View {
                         
                         
 //                        TimerView(setDate: self.djs.start)
-                        TimerView(setDate: parseStringDate(str: self.djs.start[num]))
+//                        TimerView(setDate: parseStringDate(str: self.djs.start[num]))
+//                        TimerView(setDate: Date().addingTimeInterval(4))
+                        TimerView(setDate: Date().addingTimeInterval(4), djs:djs)
                         
                         Text(self.djs.name[num])
                     }

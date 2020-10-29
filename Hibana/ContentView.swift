@@ -10,7 +10,7 @@ import SwiftUI
 
 class DJ: ObservableObject {
     @Published var name = ["RAKU","TAISUKE"]
-    @Published var start = ["2020-10-29T10:30:00Z","2020-10-29T12:00:00Z"]
+    @Published var start = ["2020-10-29T10:34:20Z","2020-10-29T12:00:00Z"]
     @Published var active = [true,true]
 }
 
