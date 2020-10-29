@@ -12,6 +12,9 @@
 		33A39A32254AC2CA00B6AA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A39A31254AC2CA00B6AA95 /* Assets.xcassets */; };
 		33A39A35254AC2CA00B6AA95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */; };
 		33A39A42254AC47900B6AA95 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A41254AC47900B6AA95 /* ClockView.swift */; };
+		33A39A46254AC5D900B6AA95 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A45254AC5D900B6AA95 /* TimerView.swift */; };
+		33A39A49254AC60900B6AA95 /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A48254AC60900B6AA95 /* TimeTableView.swift */; };
+		33A39A50254AC79300B6AA95 /* DJRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A4F254AC79300B6AA95 /* DJRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33A39A36254AC2CA00B6AA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33A39A41254AC47900B6AA95 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		33A39A45254AC5D900B6AA95 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		33A39A48254AC60900B6AA95 /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		33A39A4F254AC79300B6AA95 /* DJRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				33A39A41254AC47900B6AA95 /* ClockView.swift */,
+				33A39A45254AC5D900B6AA95 /* TimerView.swift */,
+				33A39A48254AC60900B6AA95 /* TimeTableView.swift */,
+				33A39A4F254AC79300B6AA95 /* DJRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,7 +160,10 @@
 			files = (
 				33A39A30254AC2CA00B6AA95 /* ContentView.swift in Sources */,
 				33A39A42254AC47900B6AA95 /* ClockView.swift in Sources */,
+				33A39A46254AC5D900B6AA95 /* TimerView.swift in Sources */,
+				33A39A49254AC60900B6AA95 /* TimeTableView.swift in Sources */,
 				33A39A2E254AC2CA00B6AA95 /* HibanaApp.swift in Sources */,
+				33A39A50254AC79300B6AA95 /* DJRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
