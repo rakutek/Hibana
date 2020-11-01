@@ -12,9 +12,6 @@ import SwiftUI
 struct TimeTableView: View {
     
     
-    
-    
-    
     @ObservedObject var djs = DJ()
     
     
@@ -44,7 +41,8 @@ struct TimeTableView: View {
 //                        TimerView(setDate: self.djs.start)
 //                        TimerView(setDate: parseStringDate(str: self.djs.start[num]))
 //                        TimerView(setDate: Date().addingTimeInterval(4))
-                        TimerView(setDate: Date().addingTimeInterval(4), djs:djs)
+                        TimerView(num: num, djs:djs)
+                        
                         
                         Text(self.djs.name[num])
                     }

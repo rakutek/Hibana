@@ -1,8 +1,18 @@
 import SwiftUI
 
 struct TimerView : View {
+    
+    func parseStringDate(str: String) -> Date {
+        let formatter = DateFormatter()
+        let localeStyle = Locale(identifier: "en_US_POSIX")
+        formatter.locale = localeStyle
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        return formatter.date(from: str)!
+    }
+    
   @State var nowD:Date = Date()
-   let setDate:Date
+    let num:Int
     
 //    @ObservedObject var djs = DJ()
     @ObservedObject var djs: DJ
@@ -15,7 +25,7 @@ struct TimerView : View {
    
    var body: some View {
         
-       Text(TimerFunc(from: setDate))
+       Text(TimerFunc(from: parseStringDate(str: djs.start[num])))
            .font(.largeTitle)
            .onAppear(perform: {
                           _ = self.timer
@@ -25,7 +35,7 @@ struct TimerView : View {
    func TimerFunc(from date:Date)->String{
        let cal = Calendar(identifier: .japanese)
 
-       let timeVal = cal.dateComponents([.day,.hour,.minute,.second], from: nowD,to: setDate)
+    let timeVal = cal.dateComponents([.day,.hour,.minute,.second], from: nowD,to: parseStringDate(str: djs.start[num]) )
     
     if timeVal.day! >= 1 {
         return String(format: "%02d:%02d:%02d",
@@ -37,7 +47,7 @@ struct TimerView : View {
     } else {
         if(timeVal.hour == 0 && timeVal.minute == 0 && timeVal.second==0){
 //            return String("fa")
-            djs.active[0] = false
+            djs.active[num] = false
 //            djs.name[0] = "f"
             
         }
@@ -63,3 +73,4 @@ struct TimerView : View {
 //
 //    }
 //}
+
