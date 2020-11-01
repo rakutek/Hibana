@@ -65,12 +65,3 @@ struct TimerView : View {
    
 }
 
-
-//struct TimerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TimerView(setDate:  Date().addingTimeInterval(5))
-//
-//
-//    }
-//}
-
