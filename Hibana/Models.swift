@@ -4,4 +4,5 @@ struct DJModel: Identifiable {
     var sex: String
     var start:String
     var active:Bool
+    var description:String
 }

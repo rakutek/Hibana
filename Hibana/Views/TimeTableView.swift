@@ -9,8 +9,8 @@ import SwiftUI
 
 class DJ : ObservableObject {
     @Published var DJMock: [DJModel] = [
-        DJModel(id: 1, name: "RAKU", sex: "men", start: "2020-11-08T08:13:40Z", active: true),
-        DJModel(id: 1, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true)
+        DJModel(id: 1, name: "TAISUKE", sex: "men", start: "2020-11-08T08:13:40Z", active: true,description:"ヤッホ〜〜〜TAISUKE"),
+        DJModel(id: 2, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true,description:"ヤッホ〜〜〜masahiro")
     ]
 }
 
@@ -18,7 +18,7 @@ class DJ : ObservableObject {
 struct TimeTableView: View {
     @ObservedObject var djs = DJ()
     @State var show = false
-
+    
     
     func parseStringDate(str: String) -> Date {
         let formatter = DateFormatter()
@@ -32,36 +32,64 @@ struct TimeTableView: View {
     
     
     var body: some View {
-        VStack{
-            ForEach(0..<djs.DJMock.count) { num in
-                if(self.djs.DJMock[num].active == false){
-                } else {
-                    Button(action: {self.show = true}, label: {
-                        HStack{
-                            //TimerView(setDate:Date().addingTimeInterval(4))
-                            Spacer()
-                            TimerView(num: num, djs:djs)
-                            Spacer()
-
-                            Text(self.djs.DJMock[num].name)
-                                .font(.title)
-                            Spacer()
-                        }
-                    })
-                    .foregroundColor(.primary)
-                    .sheet(isPresented: self.$show) {
-                        DJDetail()
+        
+        
+        NavigationView {
+            VStack{
+                ForEach(0..<djs.DJMock.count) { num in
+                    if(self.djs.DJMock[num].active == false){
+                    } else {
+                        
+                        
+                        
+                        
+                        
+                        Button(action: {self.show = true}, label: {
+                            HStack{
+                                //TimerView(setDate:Date().addingTimeInterval(4))
+                                
+                                Image(djs.DJMock[num].name)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Circle())
+                                    .frame(width: 60, height: 60, alignment: .center)
+                                
+                                
+                                
+                                Spacer()
+                                TimerView(num: num, djs:djs)
+                                Spacer()
+                                
+                                Text(self.djs.DJMock[num].name)
+                                    .font(.title)
+                                Spacer()
+                            }
+                        })
+                        .foregroundColor(.primary)
+                        //                    .sheet(isPresented: self.$show) {
+                        //                        DJDetail(dj:self.djs, num:num)
+                        //                    }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                     }
                 }
             }
         }
-        
     }
 }
 
 struct DJDetail: View {
+    @ObservedObject var dj:DJ
+    let num:Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(num)")
+        Text(dj.DJMock[num].description)
     }
 }
 
