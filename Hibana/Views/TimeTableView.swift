@@ -1,16 +1,10 @@
-//
-//  TimeTableView.swift
-//  Hibana
-//
-//  Created by raku on 2020/10/05.
-//
-
 import SwiftUI
 
 class DJ : ObservableObject {
     @Published var DJMock: [DJModel] = [
-        DJModel(id: 1, name: "TAISUKE", sex: "men", start: "2020-11-08T08:13:40Z", active: true,description:"ヤッホ〜〜〜TAISUKE"),
-        DJModel(id: 2, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true,description:"ヤッホ〜〜〜masahiro")
+        DJModel(id: 1, name: "TAISUKE", sex: "men", start: "2020-11-08T08:13:40Z", active: true,description:"ヤッホ〜〜〜TAISUKE",genre:["EDM","HIP HOP","BASS","TRANCE"]),
+        
+        DJModel(id: 2, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true,description:"ヤッホ〜〜〜masahiro",genre:["EDM","HIP HOP","BASS","TRANCE"])
     ]
 }
 
@@ -30,8 +24,6 @@ struct TimeTableView: View {
     }
     
     var body: some View {
-        
-        
         NavigationView {
             VStack{
                 ForEach(0..<djs.DJMock.count) { num in
@@ -68,13 +60,29 @@ struct DJDetail: View {
     let num:Int
     
     var body: some View {
-        Text("\(num)")
-        Text(dj.DJMock[num].description)
+        Image(dj.DJMock[num].name)
+            .resizable()
+            .scaledToFit()
+            .clipShape(Circle())
+            .frame(width: 100, height: 100, alignment: .center)
+        
+        VStack{
+            
+            HStack{
+                ForEach(0..<dj.DJMock[num].genre.count) { n in
+                    Text(dj.DJMock[num].genre[n])
+                }
+            }
+            .padding()
+            
+            Text(dj.DJMock[num].description)
+        }
     }
 }
 
 struct TimeTableView_Previews: PreviewProvider {
     static var previews: some View {
         TimeTableView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
     }
 }

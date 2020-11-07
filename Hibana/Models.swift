@@ -5,4 +5,5 @@ struct DJModel: Identifiable {
     var start:String
     var active:Bool
     var description:String
+    var genre:[String]
 }
