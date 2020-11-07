@@ -29,8 +29,6 @@ struct TimeTableView: View {
         return formatter.date(from: str)!
     }
     
-    
-    
     var body: some View {
         
         
@@ -39,23 +37,14 @@ struct TimeTableView: View {
                 ForEach(0..<djs.DJMock.count) { num in
                     if(self.djs.DJMock[num].active == false){
                     } else {
-                        
-                        
-                        
-                        
-                        
-                        Button(action: {self.show = true}, label: {
+                        NavigationLink(destination: DJDetail(dj:self.djs, num:num) ) {
                             HStack{
                                 //TimerView(setDate:Date().addingTimeInterval(4))
-                                
                                 Image(djs.DJMock[num].name)
                                     .resizable()
                                     .scaledToFit()
                                     .clipShape(Circle())
                                     .frame(width: 60, height: 60, alignment: .center)
-                                
-                                
-                                
                                 Spacer()
                                 TimerView(num: num, djs:djs)
                                 Spacer()
@@ -64,18 +53,9 @@ struct TimeTableView: View {
                                     .font(.title)
                                 Spacer()
                             }
-                        })
-                        .foregroundColor(.primary)
-                        //                    .sheet(isPresented: self.$show) {
-                        //                        DJDetail(dj:self.djs, num:num)
-                        //                    }
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                            .foregroundColor(.primary)
+                            
+                        }
                     }
                 }
             }
