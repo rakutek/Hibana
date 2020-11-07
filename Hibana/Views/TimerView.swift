@@ -25,7 +25,7 @@ struct TimerView : View {
    
    var body: some View {
         
-       Text(TimerFunc(from: parseStringDate(str: djs.start[num])))
+    Text(TimerFunc(from: parseStringDate(str: djs.DJMock[num].start)))
            .font(.largeTitle)
            .onAppear(perform: {
                           _ = self.timer
@@ -35,7 +35,7 @@ struct TimerView : View {
    func TimerFunc(from date:Date)->String{
        let cal = Calendar(identifier: .japanese)
 
-    let timeVal = cal.dateComponents([.day,.hour,.minute,.second], from: nowD,to: parseStringDate(str: djs.start[num]) )
+    let timeVal = cal.dateComponents([.day,.hour,.minute,.second], from: nowD,to: parseStringDate(str: djs.DJMock[num].start) )
     
     if timeVal.day! >= 1 {
         return String(format: "%02d:%02d:%02d",
@@ -47,7 +47,7 @@ struct TimerView : View {
     } else {
 //        if(timeVal.hour! < 0 && timeVal.minute! < 0 && timeVal.second!<0){
         if(timeVal.hour == 0 && timeVal.minute == 0 && timeVal.second==0){
-            djs.active[num] = false
+            djs.DJMock[num].active = false
 //            djs.name[0] = "f"
             
         } else {

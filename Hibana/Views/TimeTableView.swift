@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+class DJ : ObservableObject {
+    @Published var DJMock: [DJModel] = [
+        DJModel(id: 1, name: "RAKU", sex: "men", start: "2020-11-08T08:13:40Z", active: true),
+        DJModel(id: 1, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true)
+    ]
+}
 
 
 struct TimeTableView: View {
@@ -15,13 +21,7 @@ struct TimeTableView: View {
     @ObservedObject var djs = DJ()
     
     @State var show = false
-    
-    let DJMock: [DJModel] = [
-        DJModel(id: 1, name: "RAKU", sex: "men", start: "2020-11-08T04:13:40Z", active: true),
-        DJModel(id: 1, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true)
 
-    
-    ]
     
     func parseStringDate(str: String) -> Date {
         let formatter = DateFormatter()
@@ -37,7 +37,10 @@ struct TimeTableView: View {
     var body: some View {
         
         VStack{
-            ForEach(0..<djs.name.count) { num in                if(self.djs.active[num] == false){
+            ForEach(0..<djs.DJMock.count) { num in
+                
+                
+                if(self.djs.DJMock[num].active == false){
                     
                 }
                 else {
@@ -50,9 +53,13 @@ struct TimeTableView: View {
                             TimerView(num: num, djs:djs)
                             Spacer()
 
-                            Text(self.djs.name[num])
+                            Text(self.djs.DJMock[num].name)
                                 .font(.title)
                             Spacer()
+                            
+                            
+                            
+                            
                         }
                     })
                     .foregroundColor(.primary)
