@@ -13,8 +13,6 @@ struct TimerView : View {
     
   @State var nowD:Date = Date()
     let num:Int
-    
-//    @ObservedObject var djs = DJ()
     @ObservedObject var djs: DJ
     
    var timer: Timer {
@@ -45,18 +43,11 @@ struct TimerView : View {
         timeVal.minute ?? 00)
         
     } else {
-//        if(timeVal.hour! < 0 && timeVal.minute! < 0 && timeVal.second!<0){
         if(timeVal.hour == 0 && timeVal.minute == 0 && timeVal.second==0){
             djs.DJMock[num].active = false
-//            djs.name[0] = "f"
-            
-        } else {
-//            djs.active[num] = true
         }
         
         return String(format: "%02d:%02d:%02d",
-                      
-        
         timeVal.hour ?? 00,
         timeVal.minute ?? 00,
         timeVal.second ?? 00

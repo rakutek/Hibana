@@ -16,10 +16,7 @@ class DJ : ObservableObject {
 
 
 struct TimeTableView: View {
-    
-    
     @ObservedObject var djs = DJ()
-    
     @State var show = false
 
     
@@ -35,17 +32,10 @@ struct TimeTableView: View {
     
     
     var body: some View {
-        
         VStack{
             ForEach(0..<djs.DJMock.count) { num in
-                
-                
                 if(self.djs.DJMock[num].active == false){
-                    
-                }
-                else {
-                    
-                    
+                } else {
                     Button(action: {self.show = true}, label: {
                         HStack{
                             //TimerView(setDate:Date().addingTimeInterval(4))
@@ -56,22 +46,14 @@ struct TimeTableView: View {
                             Text(self.djs.DJMock[num].name)
                                 .font(.title)
                             Spacer()
-                            
-                            
-                            
-                            
                         }
                     })
                     .foregroundColor(.primary)
                     .sheet(isPresented: self.$show) {
                         DJDetail()
                     }
-                    
-                    
-                    
                 }
             }
-            
         }
         
     }
