@@ -36,10 +36,6 @@ struct TimeTableView: View {
                 }
                 else {
                     HStack{
-                        
-                        
-//                        TimerView(setDate: self.djs.start)
-//                        TimerView(setDate: parseStringDate(str: self.djs.start[num]))
 //                        TimerView(setDate: Date().addingTimeInterval(4))
                         TimerView(num: num, djs:djs)
                         
