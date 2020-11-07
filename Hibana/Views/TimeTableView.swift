@@ -14,6 +14,14 @@ struct TimeTableView: View {
     
     @ObservedObject var djs = DJ()
     
+    @State var show = false
+    
+    let DJMock: [DJModel] = [
+        DJModel(id: 1, name: "RAKU", sex: "men", start: "2020-11-08T04:13:40Z", active: true),
+        DJModel(id: 1, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true)
+
+    
+    ]
     
     func parseStringDate(str: String) -> Date {
         let formatter = DateFormatter()
@@ -29,25 +37,42 @@ struct TimeTableView: View {
     var body: some View {
         
         VStack{
-            ForEach(0..<djs.name.count) { num in
-//                if(self.djs.name[num] == ""){
-                if(self.djs.active[num] == false){
+            ForEach(0..<djs.name.count) { num in                if(self.djs.active[num] == false){
                     
                 }
                 else {
-                    HStack{
-//                        TimerView(setDate: Date().addingTimeInterval(4))
-                        TimerView(num: num, djs:djs)
-                        
-                        
-                        Text(self.djs.name[num])
+                    
+                    
+                    Button(action: {self.show = true}, label: {
+                        HStack{
+                            //TimerView(setDate:Date().addingTimeInterval(4))
+                            Spacer()
+                            TimerView(num: num, djs:djs)
+                            Spacer()
+
+                            Text(self.djs.name[num])
+                                .font(.title)
+                            Spacer()
+                        }
+                    })
+                    .foregroundColor(.primary)
+                    .sheet(isPresented: self.$show) {
+                        DJDetail()
                     }
+                    
+                    
                     
                 }
             }
             
         }
         
+    }
+}
+
+struct DJDetail: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
