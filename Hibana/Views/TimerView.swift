@@ -59,9 +59,9 @@ struct TimerView : View {
                        timeVal.second ?? 00
                     )
             
-            if s.contains("-") { // -> true
-                djs.DJMock[num].active = false
-            }
+//            if s.contains("-") { // -> true
+//                djs.DJMock[num].active = false
+//            }
             
             return s
             
