@@ -2,9 +2,9 @@ import SwiftUI
 
 class DJ : ObservableObject {
     @Published var DJMock: [DJModel] = [
-        DJModel(id: 1, name: "TAISUKE", sex: "men", start: "2020-11-08T08:13:40Z", active: true,description:"ヤッホ〜〜〜TAISUKE",genre:["EDM","HIP HOP","BASS"]),
+        DJModel(id: 1, name: "TAISUKE", sex: "men", start: "2020-11-09T17:09:30Z", active: true,description:"ヤッホ〜〜〜TAISUKE",genre:["EDM","HIP HOP","BASS"]),
         
-        DJModel(id: 2, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true,description:"ヤッホ〜〜〜masahiro",genre:["EDM","HIP HOP","BASS","TRANCE"])
+        DJModel(id: 2, name: "MASAHIRO", sex: "men", start: "2020-11-08T17:28:20Z", active: true,description:"ヤッホ〜〜〜masahiro",genre:["EDM","HIP HOP","BASS","TRANCE"])
     ]
 }
 
@@ -27,8 +27,11 @@ struct TimeTableView: View {
         NavigationView {
             VStack{
                 ForEach(0..<djs.DJMock.count) { num in
+
+                    
                     if(self.djs.DJMock[num].active == false){
                     } else {
+                        
                         NavigationLink(destination: DJDetail(dj:self.djs, num:num) ) {
                             HStack{
                                 Spacer()

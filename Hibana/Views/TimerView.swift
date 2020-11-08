@@ -44,17 +44,28 @@ struct TimerView : View {
             
         } else {
             if(timeVal.hour == 0 && timeVal.minute == 0 && timeVal.second==0){
-                //            if(timeVal.hour! < 0 && timeVal.minute! < 0 && timeVal.second!<0){
                 djs.DJMock[num].active = false
-            } else {
-                //            djs.DJMock[num].active = true
             }
             
-            return String(format: "%02d:%02d:%02d",
-                          timeVal.hour ?? 00,
-                          timeVal.minute ?? 00,
-                          timeVal.second ?? 00
-            )
+//            return String(format: "%02d:%02d:%02d",
+//                          timeVal.hour ?? 00,
+//                          timeVal.minute ?? 00,
+//                          timeVal.second ?? 00
+//            )
+            
+            let s:String = String(format: "%02d:%02d:%02d",
+                       timeVal.hour ?? 00,
+                       timeVal.minute ?? 00,
+                       timeVal.second ?? 00
+                    )
+            
+            if s.contains("-") { // -> true
+                djs.DJMock[num].active = false
+            }
+            
+            return s
+            
+            
         }
         
     }
