@@ -2,7 +2,7 @@ import SwiftUI
 
 class DJ : ObservableObject {
     @Published var DJMock: [DJModel] = [
-        DJModel(id: 1, name: "TAISUKE", sex: "men", start: "2020-11-08T08:13:40Z", active: true,description:"ヤッホ〜〜〜TAISUKE",genre:["EDM","HIP HOP","BASS","TRANCE"]),
+        DJModel(id: 1, name: "TAISUKE", sex: "men", start: "2020-11-08T08:13:40Z", active: true,description:"ヤッホ〜〜〜TAISUKE",genre:["EDM","HIP HOP","BASS"]),
         
         DJModel(id: 2, name: "MASAHIRO", sex: "men", start: "2020-11-08T04:13:40Z", active: true,description:"ヤッホ〜〜〜masahiro",genre:["EDM","HIP HOP","BASS","TRANCE"])
     ]
@@ -31,6 +31,7 @@ struct TimeTableView: View {
                     } else {
                         NavigationLink(destination: DJDetail(dj:self.djs, num:num) ) {
                             HStack{
+                                Spacer()
                                 //TimerView(setDate:Date().addingTimeInterval(4))
                                 Image(djs.DJMock[num].name)
                                     .resizable()
