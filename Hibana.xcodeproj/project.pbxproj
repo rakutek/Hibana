@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33A39A2E254AC2CA00B6AA95 /* HibanaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A2D254AC2CA00B6AA95 /* HibanaApp.swift */; };
+		33A39A30254AC2CA00B6AA95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A2F254AC2CA00B6AA95 /* ContentView.swift */; };
+		33A39A32254AC2CA00B6AA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A39A31254AC2CA00B6AA95 /* Assets.xcassets */; };
+		33A39A35254AC2CA00B6AA95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */; };
+		33A39A42254AC47900B6AA95 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A41254AC47900B6AA95 /* ClockView.swift */; };
+		33A39A46254AC5D900B6AA95 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A45254AC5D900B6AA95 /* TimerView.swift */; };
+		33A39A49254AC60900B6AA95 /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A39A48254AC60900B6AA95 /* TimeTableView.swift */; };
+		33F901332556A7E9007A4098 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F901322556A7E9007A4098 /* Models.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		33A39A2A254AC2CA00B6AA95 /* Hibana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hibana.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A39A2D254AC2CA00B6AA95 /* HibanaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HibanaApp.swift; sourceTree = "<group>"; };
+		33A39A2F254AC2CA00B6AA95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		33A39A31254AC2CA00B6AA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		33A39A36254AC2CA00B6AA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A39A41254AC47900B6AA95 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		33A39A45254AC5D900B6AA95 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		33A39A48254AC60900B6AA95 /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		33F901322556A7E9007A4098 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33A39A27254AC2CA00B6AA95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33A39A21254AC2CA00B6AA95 = {
+			isa = PBXGroup;
+			children = (
+				33A39A2C254AC2CA00B6AA95 /* Hibana */,
+				33A39A2B254AC2CA00B6AA95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33A39A2B254AC2CA00B6AA95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33A39A2A254AC2CA00B6AA95 /* Hibana.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33A39A2C254AC2CA00B6AA95 /* Hibana */ = {
+			isa = PBXGroup;
+			children = (
+				33A39A40254AC46100B6AA95 /* Views */,
+				33A39A2F254AC2CA00B6AA95 /* ContentView.swift */,
+				33A39A2D254AC2CA00B6AA95 /* HibanaApp.swift */,
+				33A39A31254AC2CA00B6AA95 /* Assets.xcassets */,
+				33A39A36254AC2CA00B6AA95 /* Info.plist */,
+				33A39A33254AC2CA00B6AA95 /* Preview Content */,
+				33F901322556A7E9007A4098 /* Models.swift */,
+			);
+			path = Hibana;
+			sourceTree = "<group>";
+		};
+		33A39A33254AC2CA00B6AA95 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				33A39A34254AC2CA00B6AA95 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33A39A40254AC46100B6AA95 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33A39A41254AC47900B6AA95 /* ClockView.swift */,
+				33A39A45254AC5D900B6AA95 /* TimerView.swift */,
+				33A39A48254AC60900B6AA95 /* TimeTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33A39A29254AC2CA00B6AA95 /* Hibana */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A39A39254AC2CA00B6AA95 /* Build configuration list for PBXNativeTarget "Hibana" */;
+			buildPhases = (
+				33A39A26254AC2CA00B6AA95 /* Sources */,
+				33A39A27254AC2CA00B6AA95 /* Frameworks */,
+				33A39A28254AC2CA00B6AA95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hibana;
+			productName = Hibana;
+			productReference = 33A39A2A254AC2CA00B6AA95 /* Hibana.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33A39A22254AC2CA00B6AA95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					33A39A29254AC2CA00B6AA95 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 33A39A25254AC2CA00B6AA95 /* Build configuration list for PBXProject "Hibana" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33A39A21254AC2CA00B6AA95;
+			productRefGroup = 33A39A2B254AC2CA00B6AA95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33A39A29254AC2CA00B6AA95 /* Hibana */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33A39A28254AC2CA00B6AA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A39A35254AC2CA00B6AA95 /* Preview Assets.xcassets in Resources */,
+				33A39A32254AC2CA00B6AA95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33A39A26254AC2CA00B6AA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A39A30254AC2CA00B6AA95 /* ContentView.swift in Sources */,
+				33A39A42254AC47900B6AA95 /* ClockView.swift in Sources */,
+				33A39A46254AC5D900B6AA95 /* TimerView.swift in Sources */,
+				33F901332556A7E9007A4098 /* Models.swift in Sources */,
+				33A39A49254AC60900B6AA95 /* TimeTableView.swift in Sources */,
+				33A39A2E254AC2CA00B6AA95 /* HibanaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		33A39A37254AC2CA00B6AA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		33A39A38254AC2CA00B6AA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33A39A3A254AC2CA00B6AA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hibana/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Hibana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rakutek-hibana.Hibana";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33A39A3B254AC2CA00B6AA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hibana/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Hibana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rakutek-hibana.Hibana";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33A39A25254AC2CA00B6AA95 /* Build configuration list for PBXProject "Hibana" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A39A37254AC2CA00B6AA95 /* Debug */,
+				33A39A38254AC2CA00B6AA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A39A39254AC2CA00B6AA95 /* Build configuration list for PBXNativeTarget "Hibana" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A39A3A254AC2CA00B6AA95 /* Debug */,
+				33A39A3B254AC2CA00B6AA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33A39A22254AC2CA00B6AA95 /* Project object */;
+}
