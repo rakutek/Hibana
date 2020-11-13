@@ -24,7 +24,7 @@ struct TimeTableView: View {
     }
     
     var body: some View {
-        NavigationView {
+        
             VStack{
                 ForEach(0..<djs.DJMock.count) { num in
 
@@ -32,7 +32,7 @@ struct TimeTableView: View {
                     if(self.djs.DJMock[num].active == false){
                     } else {
                         
-                        NavigationLink(destination: DJDetail(dj:self.djs, num:num) ) {
+                        NavigationLink(destination: DJDetailView(dj:self.djs, num:num) ) {
                             HStack{
                                 Spacer()
                                 //TimerView(setDate:Date().addingTimeInterval(4))
@@ -55,34 +55,10 @@ struct TimeTableView: View {
                     }
                 }
             }
-        }
+        
     }
 }
 
-struct DJDetail: View {
-    @ObservedObject var dj:DJ
-    let num:Int
-    
-    var body: some View {
-        Image(dj.DJMock[num].name)
-            .resizable()
-            .scaledToFit()
-            .clipShape(Circle())
-            .frame(width: 100, height: 100, alignment: .center)
-        
-        VStack{
-            
-            HStack{
-                ForEach(0..<dj.DJMock[num].genre.count) { n in
-                    Text(dj.DJMock[num].genre[n])
-                }
-            }
-            .padding()
-            
-            Text(dj.DJMock[num].description)
-        }
-    }
-}
 
 struct TimeTableView_Previews: PreviewProvider {
     static var previews: some View {
