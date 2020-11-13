@@ -23,8 +23,23 @@ struct DJDetailView: View {
             
             HStack{
                 ForEach(0..<dj.DJMock[num].genre.count) { n in
-                    Text(dj.DJMock[num].genre[n])
+                    
+                    
+                    
+                    
+                    
+                    NavigationLink(destination: GenreView(genre: dj.DJMock[num].genre[n])) {
+                        
+                        Text(dj.DJMock[num].genre[n])
+                        
+                    }.foregroundColor(.primary)
+                    
+                    
+                    
+                    
+                    
                 }
+                
             }
             .padding()
             
