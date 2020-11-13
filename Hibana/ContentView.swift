@@ -12,21 +12,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            
             VStack {
-                
                 ForEach(0..<arr.count) { num in
-                
-                NavigationLink(destination: TimeTableView()) {
-                    Text(arr[num])
+                    NavigationLink(destination: TimeTableView()) {
+                        Text(arr[num])
+                    }
+                    .foregroundColor(.primary)
+                    .font(.title)
+                    .padding()
                 }
-                .foregroundColor(.primary)
-                .font(.title)
-                .padding()
-                
-                
-                }
-                
             }
         }
     }
